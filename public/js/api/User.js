@@ -1,5 +1,3 @@
-//const { response } = require("express");
-
 /**
  * Класс User управляет авторизацией, выходом и
  * регистрацией пользователя из приложения
@@ -99,7 +97,6 @@ class User {
     createRequest({
       url: this.URL + '/logout',
       method: 'POST',
-      data,
       callback: (err, response) => {
         if (response && response.user) {
           this.unsetCurrent(response.user);
